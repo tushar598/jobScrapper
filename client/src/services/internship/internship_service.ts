@@ -9,3 +9,13 @@ export const fetchInternCards = async (userId: string) => {
     throw new Error("Failed to fetch internship data");
   }
 };
+
+export const getInternships = async (userId: string) => {
+  try {
+    const response = await api.get(`/internship/get/${userId}`);
+    return response.data;
+  } catch (error) {
+    console.error("❌ Error fetching internship cards", error);
+    throw new Error("Failed to fetch internship data");
+  }
+};
