@@ -1,4 +1,4 @@
-import api from "../api";
+import api from "../../api";
 
 export const uploadResume = async (file: File, userId: string) => {
   try {
