@@ -9,14 +9,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 
-// Mock auth hook
-const useAuth = () => ({
-  login: async (email: string, password: string) => {
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log("Logged in:", email, password);
-  },
-  loading: false,
-});
+import { useAuth } from "../hooks/useAuth";
 
 const LoginPage = () => {
   const { login, loading } = useAuth();

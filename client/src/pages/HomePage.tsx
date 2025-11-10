@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 import {
   Sparkles,
   Target,
@@ -9,18 +11,16 @@ import {
   Star,
   Play,
 } from "lucide-react";
-import { useAuth } from "../hooks/useAuth";
-
-
 
 const HomePage = () => {
-  const  user  = useAuth();
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
 
   const handleStarted = () => {
-    if (user) {
-      window.location.href = "/resume-upload";
+    if (isAuthenticated) {
+      navigate("/resume-upload");
     } else {
-      window.location.href = "/login";
+      navigate("/login");
     }
   };
 
@@ -106,18 +106,13 @@ const HomePage = () => {
 
             {/* Right Image Area */}
             <div className="relative lg:h-[600px] flex items-center justify-center">
-              <div className="relative w-full h-full bg-gradient-to-br from-green-400/10 to-transparent rounded-3xl overflow-hidden">
-                {/* Placeholder for anime characters */}
+              <div className="relative w-full h-full rounded-3xl overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <div className="w-64 h-64 mx-auto bg-gray-800 rounded-2xl border-2 border-dashed border-gray-700 flex items-center justify-center">
-                      <div className="text-gray-600">
-                        <Target className="w-16 h-16 mx-auto mb-2" />
-                        <p className="text-sm">Hero Character Image</p>
-                        <p className="text-xs mt-1">PNG with transparency</p>
-                      </div>
-                    </div>
-                  </div>
+                  <img
+                    src="/one_piece.png"
+                    alt="Hero Character"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
             </div>
@@ -126,18 +121,33 @@ const HomePage = () => {
       </section>
 
       {/* Collection Section */}
+      {/* Collection Section */}
       <section className="py-20 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image with green blob */}
-            <div className="relative order-2 lg:order-1">
+            <div className="relative order-2 lg:order-1 flex justify-center items-center">
+              {/* Soft green background blob */}
               <div className="absolute inset-0 bg-green-400 rounded-full blur-3xl opacity-30 scale-75"></div>
-              <div className="relative w-full h-96 bg-gray-800 rounded-3xl border-2 border-dashed border-gray-700 flex items-center justify-center">
-                <div className="text-center text-gray-600">
-                  <TrendingUp className="w-16 h-16 mx-auto mb-2" />
-                  <p className="text-sm">Character Image 1</p>
-                  <p className="text-xs mt-1">PNG with transparency</p>
-                </div>
+
+              {/* Responsive Image container */}
+              <div
+                className="
+          relative 
+          w-[250px] h-[250px]          /* base mobile size */
+          sm:w-[300px] sm:h-[300px]    /* small devices */
+          md:w-[350px] md:h-[350px]    /* tablets */
+          lg:w-[400px] lg:h-[400px]    /* desktops */
+          xl:w-[400px] xl:h-[400px]    /* large screens */
+          bg-transparent 
+          flex items-center justify-center
+        "
+              >
+                <img
+                  src="/luffy_staw.png"
+                  alt="Hero Character"
+                  className="w-full h-full object-contain drop-shadow-[0_0_20px_rgba(0,255,100,0.4)]"
+                />
               </div>
             </div>
 
