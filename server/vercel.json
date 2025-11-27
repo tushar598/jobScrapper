@@ -1,8 +1,8 @@
 {
   "buildCommand": "npm install",
   "env": {
-    "MONGO_URI": "mongodb+srv://tushar19chouhan:tushar1982@placementready.dykjtpm.mongodb.net/?appName=PlacementReady
-GOOGLE_API_KEY=AIzaSyAReUvk-z21KInjZwfRa4UN7dDKmBgSLTI",
+    "MONGO_URI": mongodb+srv://tushar19chouhan:tushar1982@placementready.dykjtpm.mongodb.net/?appName=PlacementReady
+GOOGLE_API_KEY=AIzaSyAReUvk-z21KInjZwfRa4UN7dDKmBgSLTI,
     "GOOGLE_API_KEY": "AIzaSyAReUvk-z21KInjZwfRa4UN7dDKmBgSLTI",
     "JWT_SECRET": "tushar@9109821765@19062006@9993857165"
   }
