@@ -5,7 +5,6 @@ import {
   Sparkles,
   Target,
   TrendingUp,
-  Zap,
   CheckCircle,
   ArrowRight,
   Star,
@@ -41,22 +40,21 @@ const HomePage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="text-left space-y-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-400/10 border border-green-400/30 rounded-full">
-                <Sparkles className="w-4 h-4 text-green-400" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 shadow-2xl shadow-amber-50 border-1 border-green-400 backdrop-blur-2xl 0 rounded-full ">
+                
                 <span className="text-sm font-medium text-green-400">
                   AI-Powered Career Intelligence
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                See The World
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                Join Thousands Who’ve Transformed 
                 <br />
-                <span className="text-green-400">Famous Career</span>
+                <span className="text-green-400">Their Careers Using AI-Powered Tools</span>
               </h1>
 
               <p className="text-lg text-gray-400 max-w-xl">
-                Leverage cutting-edge artificial intelligence to optimize your
-                resume, discover perfect job matches, and accelerate your career
+                Leverage cutting-edge artificial intelligence, discover perfect job matches, and accelerate your career
                 growth with real-time insights.
               </p>
 
@@ -69,7 +67,7 @@ const HomePage = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
 
-                <button className="px-8 py-4 bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white text-lg font-semibold rounded-lg transition-all duration-300 flex items-center gap-2">
+                <button className="px-8 py-4 bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white text-lg font-semibold rounded-lg transition-all duration-300 flex items-center gap-2 hover:bg-red-600">
                   <Play className="w-5 h-5" />
                   Watch Demo
                 </button>
@@ -78,7 +76,7 @@ const HomePage = () => {
               {/* Stats */}
               <div className="flex flex-wrap gap-8 pt-8">
                 <div>
-                  <div className="text-3xl font-bold text-white">50K+</div>
+                  <div className="text-3xl font-bold text-white">1K+</div>
                   <div className="text-sm text-gray-400">Resumes Analyzed</div>
                 </div>
                 <div>
@@ -86,21 +84,22 @@ const HomePage = () => {
                   <div className="text-sm text-gray-400">Jobs Matched</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-white">4K+</div>
+                  <div className="text-3xl font-bold text-white">200+</div>
                   <div className="text-sm text-gray-400">Success Stories</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-2 pt-4">
                 <div className="flex">
-                  {[...Array(5)].map((_, i) => (
+                  {[...Array(4)].map((_, i) => (
                     <Star
                       key={i}
                       className="w-5 h-5 text-yellow-400 fill-yellow-400"
                     />
                   ))}
+                  <Star className="w-5 h-5 text-yellow-400" />
                 </div>
-                <span className="text-gray-400">4.9/5 from 2k+ reviews</span>
+                <span className="text-gray-400">4/5 from 2k+ reviews</span>
               </div>
             </div>
 
@@ -109,7 +108,7 @@ const HomePage = () => {
               <div className="relative w-full h-full rounded-3xl overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img
-                    src="/one_piece.png"
+                    src="/student.png"
                     alt="Hero Character"
                     className="w-full h-full object-contain"
                   />
@@ -154,11 +153,9 @@ const HomePage = () => {
             {/* Content */}
             <div className="space-y-6 order-1 lg:order-2">
               <h2 className="text-4xl md:text-5xl font-bold text-white">
-                We Have <span className="text-green-400">1000+</span>
+               Discover <span className="text-green-400">1000+</span>
                 <br />
                 Career Opportunities
-                <br />
-                <span className="text-green-400">With official Licence</span>
               </h2>
               <p className="text-gray-400 text-lg">
                 Access thousands of verified job listings across multiple
@@ -204,17 +201,31 @@ const HomePage = () => {
             </div>
 
             {/* Image with green blob */}
-            <div className="relative">
+            <div className="relative flex justify-center items-center">
+              {/* Soft amber background blob */}
               <div
-                className="absolute top-1/2 left-1/2 w-96 h-96 bg-green-400 rounded-full blur-3xl opacity-30"
+                className="absolute top-1/2 left-1/2 w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-amber-50 rounded-full blur-3xl opacity-30"
                 style={{ transform: "translate(-50%, -50%)" }}
               ></div>
-              <div className="relative w-full h-96 bg-gray-800 rounded-3xl border-2 border-dashed border-gray-700 flex items-center justify-center">
-                <div className="text-center text-gray-600">
-                  <Zap className="w-16 h-16 mx-auto mb-2" />
-                  <p className="text-sm">Character Image 2</p>
-                  <p className="text-xs mt-1">PNG with transparency</p>
-                </div>
+              {/* Responsive Image container */}
+              <div
+                className="
+                  relative
+                  w-40 h-40
+                  sm:w-56 sm:h-56
+                  md:w-72 md:h-72
+                  lg:w-96 lg:h-96
+                  xl:w-[400px] xl:h-[400px]
+                  bg-transparent
+                  flex items-center justify-center
+                  z-10
+                "
+              >
+                <img
+                  src="/subscription.png"
+                  alt="Hero Character"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
           </div>
