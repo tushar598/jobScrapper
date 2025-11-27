@@ -1,0 +1,15 @@
+{
+  "name": "jobscrapper-monorepo",
+  "version": "1.0.0",
+  "description": "Full-stack job scraper application",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "build": "npm run build -w client && npm run build -w server",
+    "dev": "npm run dev -w client & npm run dev -w server",
+    "start": "npm start -w server"
+  }
+}
