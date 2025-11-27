@@ -42,6 +42,10 @@ app.use("/api/internship", internshipRoutes);
 app.get("/__health", (req, res) => res.json({ ok: true }));
 
 // ✅ 5. Cron Worker
-cronWorker();
-
+// Skip cron worker in production (Vercel serverless environment)
+try {
+  cronWorker();
+} catch (err) {
+  console.warn("⚠️ Cron worker failed to initialize (expected on serverless):", err.message);
+}
 export default app;
