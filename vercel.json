@@ -11,7 +11,7 @@
     }
   ],
   "env": {
-    "MONGO_URI": "@mongo_uri",
+    "MONGO_URI": "@MONGO_URI",
     "GOOGLE_API_KEY": "@GOOGLE_API_KEY",
     "JWT_SECRET": "@JWT_SECRET"
   }
