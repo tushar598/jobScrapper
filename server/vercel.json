@@ -1,0 +1,8 @@
+{
+  "buildCommand": "npm install",
+  "env": {
+    "MONGO_URI": "@mongo_uri",
+    "GOOGLE_API_KEY": "@google_api_key",
+    "JWT_SECRET": "@jwt_secret"
+  }
+}
