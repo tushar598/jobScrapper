@@ -6,8 +6,7 @@ import resumeRoutes from "./routes/resumeRoutes.js";
 import jobRoutes from "./routes/jobRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import internshipRoutes from "./routes/internshipRoutes.js";
-import cronWorker from "./workers/cronWorker.js";
-
+// import cronWorker from "./workers/cronWorker.js"; // Disabled: Playwright incompatible with Vercel serverless
 const app = express();
 
 // ✅ 1. Enable CORS first
@@ -42,10 +41,4 @@ app.use("/api/internship", internshipRoutes);
 app.get("/__health", (req, res) => res.json({ ok: true }));
 
 // ✅ 5. Cron Worker
-// Skip cron worker in production (Vercel serverless environment)
-try {
-  cronWorker();
-} catch (err) {
-  console.warn("⚠️ Cron worker failed to initialize (expected on serverless):", err.message);
-}
-export default app;
+// Cron worker disabled: Playwright requires system dependencies not available in Vercel serverless environment
