@@ -12,7 +12,7 @@
   ],
   "env": {
     "MONGO_URI": "@mongo_uri",
-    "GOOGLE_API_KEY": "@google_api_key",
-    "JWT_SECRET": "@jwt_secret"
+    "GOOGLE_API_KEY": "@GOOGLE_API_KEY",
+    "JWT_SECRET": "@"@JWT_SECRET"
   }
 }
