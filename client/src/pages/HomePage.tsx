@@ -108,7 +108,7 @@ const HomePage = () => {
               <div className="relative w-full h-full rounded-3xl overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img
-                    src="/student.png"
+                    src="/job_finding.png"
                     alt="Hero Character"
                     className="w-full h-full object-contain"
                   />
@@ -143,7 +143,7 @@ const HomePage = () => {
         "
               >
                 <img
-                  src="/luffy_staw.png"
+                  src="/student.png"
                   alt="Hero Character"
                   className="w-full h-full object-contain drop-shadow-[0_0_20px_rgba(0,255,100,0.4)]"
                 />
